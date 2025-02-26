@@ -1,0 +1,17 @@
+{
+  "name": "elevenlabs-conversational-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:frontend": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11labs/client": "^0.0.7",
+    "vite": "^6.2.0"
+  }
+}

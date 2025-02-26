@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Agent</title>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding: 10px;
+                background: url('./images/redwave.png') no-repeat center center fixed;
+                background-size: cover;
+            }
+            .button-container {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .call-button {
+                width: 100px;
+                height: 100px;
+                margin: 15px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hidden {
+                display: none;
+            }
+            .signia-icon {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 37px;
+                height: 40px;
+            }
+            .header-container {
+                margin-top: 70px;
+            }
+            .agent-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./images/signia.png" alt="Signia Icon" class="signia-icon" />
+        <div class="header-container">
+            <h1>AI Agent</h1>
+        </div>
+        <div class="agent-container">
+            <img src="./images/agent.png" alt="Agent" />
+            <img id="audioWave" src="./images/wave.gif" alt="Audio Wave" class="hidden" />
+        </div>
+        <div class="button-container">
+            <button id="startButton" class="call-button">
+                <img src="./images/connect.png" alt="Start Call" />
+                <span>Call Agent</span>
+            </button>
+            <button id="stopButton" class="call-button" disabled>
+                <img src="./images/end.png" alt="End Call" />
+                <span>Disconnect</span>
+            </button>
+        </div>
+        <div style="font-size: 18px;">
+            <p>Status: <span id="connectionStatus">Disconnected</span></p>
+        </div>
+        <script type="module" src="./script.js"></script>
+        <script>
+            const audioWave = document.getElementById('audioWave');
+            document.getElementById('startButton').addEventListener('click', () => {
+                audioWave.classList.remove('hidden');
+            });
+            document.getElementById('stopButton').addEventListener('click', () => {
+                audioWave.classList.add('hidden');
+            });
+        </script>
+    </body>
+</html>
