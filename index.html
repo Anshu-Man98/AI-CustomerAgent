@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Agent</title>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding: 10px;
+                background: url('/AI-CustomerAgent/assets/redwave-wZs1nr0r.png') no-repeat center center fixed;
+                background-size: cover;
+            }
+            .button-container {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .call-button {
+                width: 100px;
+                height: 100px;
+                margin: 15px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hidden {
+                display: none;
+            }
+            .signia-icon {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 37px;
+                height: 40px;
+            }
+            .header-container {
+                margin-top: 70px;
+            }
+            .agent-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        </style>
+      <script type="module" crossorigin src="/AI-CustomerAgent/assets/index-CLw_NhjZ.js"></script>
+    </head>
+    <body>
+        <img src="/AI-CustomerAgent/assets/signia-DTrIQpiz.png" alt="Signia Icon" class="signia-icon" />
+        <div class="header-container">
+            <h1>AI Agent</h1>
+        </div>
+        <div class="agent-container">
+            <img src="data:image/png;base64,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" alt="Agent" />
+            <img id="audioWave" src="/AI-CustomerAgent/assets/wave-B2J6lcvs.gif" alt="Audio Wave" class="hidden" />
+        </div>
+        <div class="button-container">
+            <button id="startButton" class="call-button">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAACdeAAAnXgHPwViOAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA8FJREFUeJztmk1sTFEUx3+UtqJJKcpGNKq1qJ3PRiqRSC00VgRbtDtfIT5WhlppikS7kto0bFRYSFRClG2TEl8JUtSm9VlhiFZnanE7UZ37+ea9N23m/ZKzmvvO/5zz5r1777kPIiIiIiIiIiLULAA6gDgwamFx4BlwAVjhqLUBeAyMAF+BXuA2cAbYBMzMLBVvdGCXuMxGgBYg30KnBBg0+PuEKOwSXzKz5IchKBu7h7kImx38DQOtwFx/UtTz2yEwnV006FQCSUefA0CtL1lq+OYYlO5xqDJonca9CAnguB+Jquh3DEhn5yz0KoAdwCGgGbiPKJ7J99lME1XxxELc1p56jGEeUA+8M/g/5tG/lk6DqIt9zzCWAuAI6vdSggDeCZcVYl7ND6pRP5oDwByfdAA4oRDKZgEAyhDJyjRafNRhq0IkqAJUAnXAOmCWYWw18sdhGB8XS+USgaAK0Mj/0+BP4CqiKCqOKnTOO2WpYRrwQSHiZwF0C6EhYK/iukLks8NHfNw7XFcE5mpJjUatxfV7FNc2KMZv9JCrlAMWwdnYZ41GCWIHqLt+CLFQmsh85IulRm/pprPMEJit3TTo1AA9imRSdkVxbZdk7C3HPLU81wRlYwlgvaXWbGAbYvs70U8c+ezQLBn72i1FPY0SARfzsmHZrvC1RjL2sGTcoAdNJRW479RSdtKjZhHyx6FOMnanZNyQR10lDyUiQSWf4tEEf0nkL0LZNNqToXYau3BLPuaDZg3/Zoekwef4fsIX7N851uQhGpVh3PnxlCDWCbI7P5GKsbGBtcts1gSxoMQnA4VAH+Hc+UnLbuTJ92HXAp/y5CEOMGRFaMpiXKGyGvkcnQS2ZDGuUGlF/i/oBxZmMa7QKAJeIS9C99jvmdCAuRMcR3Sum7CbJn1nFWLJKQuuE+9NiZjCp87+IDZFoR+i6tYG7YiukgsxjT8bu4tooYdKmyagduzvSkzjx8UuZZ6SGwXAA01AdzC/E2Ka610tiegsh0oxYgemCqobWKS4Nqa5zqu1+ZueHaXAC01Q/aQfX8U04zOx3kAytKAU/T8hiZi28gku+VECaIi4UIy5gfLe8LsfllXy0c8OYdik4CDivC5nCwCwEnhJDhcAxDqgFXFGkJMFSLEWdT8hJwoAMB1x8PGGHC1AikJgP/CWHC1AihmI050uvJ9ATekCjKccOEXmn+j9CjvwIFgK7AOu4f7R5g2Tc9dGxWSgDPHJbRWwHLG7XIz4rL8AcbSeQHSj6hFHZBERERERERERafwFrp1jwjQrCR4AAAAASUVORK5CYII=" alt="Start Call" />
+                <span>Call Agent</span>
+            </button>
+            <button id="stopButton" class="call-button" disabled>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAzVJREFUeJzt2T2oHFUYxvHfvdFc8aMJBhTRQhS8IGlSpBCxMH5FiIghhgRCxBRCCu0Eo6iQwlLBlGmEi3JDihRqrSRor4UQzE1uvjWxMmpiyFqcGbjZzO7Ox5nZde/5w2FhduZ93ufZ3TnnzJJIJBKJRCKRWJ3MdKAxiyfxTPb6OB7BOtyTnXMVf2AZJ/AzvsdPuNlBj9FZg2dxCFfQqzmuZDU2ZzUnnjnsxi/qmx40lvA27u7MTQVmsAcXxDfePy7iDd38fEsxjx+0b7x//Jhpj5Xd+FP35vPxl/Cz6JxZHKzYbJvj86ynTpjDYsuG6ozFrLdWuRNHx2x02PhWiyGswZcTYHLUOII7ypoqO5XM4gvsKlt4CMs4JkxnF7JjD+IBPI2HI2gsCDfoKKvIGWE11uRTuYwP8UQJvXl8LCyNm2geEmGtMKPZ3f4fvId7a2jfhw9wrYH+QQ1D+KSB+BI2NRHP2ChskOr28Wld4QMNRHvirtI2NOzlQFXB9xsK9vBYDaODmI/Qz/6yYu9EEJvEAHp4d5TQXmHqmNYAbmLfIJFd4pmf1ADyEArXM+cjivSwPpZ7PBS5t3N54ZU7qGsRG17A7yPO2YIz2XhpxLnncDhCXznXiw6+iL81T/co1pZo4syKa5ZLnD+HryP0dxXPDRLZhEsNin+j/G6s/9oyrNVsN3oZT40SeVS9h5pVzCu4vix1QzghPJIvxTp8V6F4VfMKalShagjHcX9FDXPCzawN8wrqVKVsCIu4q0Z9hJ3UR0OK1zWvoFYdRoXwmUjPCt8Upo5Y5okTAMUh/Iu3GtQsZAt+ywQWlJvqhhErAMIH8VVW5yKeb1hvqFCsFV7MAHLWCw9uSzPOv5f6TY+ll87+TJhU2gxgM07iFLbWuP41YYN2Fi/Ea6s7Trr1rry97/1h94CduLHivaVWO22JJbdPTStDGBTADrea7+HXDvqNzlbB9KAQigJ4veCa68IU/L9km9sXUDeEJzL9AWxTbP7VzruOzHbF34T+AKbSfE7RN2HYmCrzOWVDmErzOaNCmGrzOYNCWBXmc/pDWFXmc14Rlrmn8fKYe0kkEolEIpFIrDr+A/yWrkRcCnJkAAAAAElFTkSuQmCC" alt="End Call" />
+                <span>Disconnect</span>
+            </button>
+        </div>
+        <div style="font-size: 18px;">
+            <p>Status: <span id="connectionStatus">Disconnected</span></p>
+        </div>
+        <script>
+            const audioWave = document.getElementById('audioWave');
+            document.getElementById('startButton').addEventListener('click', () => {
+                audioWave.classList.remove('hidden');
+            });
+            document.getElementById('stopButton').addEventListener('click', () => {
+                audioWave.classList.add('hidden');
+            });
+        </script>
+    </body>
+</html>
